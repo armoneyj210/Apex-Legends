@@ -17,7 +17,7 @@ class WeaponType(models.Model):
 
 
 class Attachment(models.Model):
-    name: models.CharField(max_length=50)
+    name =  models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
@@ -25,11 +25,9 @@ class Attachment(models.Model):
 
 class Weapon(models.Model):
     name = models.CharField(max_length=30)
-    weapon_type = models.ForeignKey\
-        (WeaponType, on_delete=models.CASCADE, related_name='weapon_type')
+    weapon_type = models.ForeignKey(WeaponType, on_delete=models.CASCADE, related_name='weapon_type')
     ammo = models.CharField(max_length=20)
-    attachments: models.ForeignKey\
-        (Attachment, on_delete=models.CASCADE, related_name='weapon_attachment')
+    attachments = models.ForeignKey(Attachment, on_delete=models.CASCADE, related_name='weapon_attachment')
     image_url = models.TextField
 
     def __str__(self):
@@ -52,3 +50,6 @@ class Character(models.Model):
     background = models.TextField
     skin = models.ForeignKey\
         (Skin, on_delete=models.CASCADE, related_name='char_skin')
+
+    def __str__(self):
+        return self.name
