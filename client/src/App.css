@@ -1,0 +1,33 @@
+.home-logo {
+  width: 15em;
+  height: 4em;
+  border: none;
+}
+.navbar {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.nav-container {
+  width: 100%;
+  font-family: "Kalam", cursive;
+  font-size: 1.15em;
+  display: flex;
+  height: 4em;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background: whitesmoke;
+  padding: 0 12px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 5px 5px #418047;
+}
+.navbar-item {
+  padding: 1em;
+  text-decoration: none;
+  margin-right: 1em;
+}
